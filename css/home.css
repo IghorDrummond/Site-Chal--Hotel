@@ -14,7 +14,7 @@ body{
 
 /* Container */
 #conteudo{
-	background-color: #ede9cc;
+	background-color: #EBE5BE;
 }
 
 /* Cabecalho */
@@ -117,7 +117,6 @@ body{
 #informacao{
 	width: 50%;
 	float: left;
-	background-color: #EBE5BE;
 }
 #informacao h4{
 	padding: 25px 25px 0px 25px;
@@ -127,11 +126,39 @@ body{
 	text-indent: 15px;
 	padding: 25px 25px 5px 25px;
 }
+
+/* Area de Selecao */
 #area-selecao{
 	width: 50%;
 	float: right;
 	background-color: #C8BE84;
-	height: 500px;
+}
+.coluna-vertical{
+	width: 90%;
+	margin: 10px auto;
+	border-bottom: 1px solid #fff;
+	font-size: 0.8em;
+	padding: 5px 0px 10px 0px;
+}
+.coluna-vertical:hover{
+	background-color: #EBE5BE;
+	cursor: pointer;
+}
+.coluna-vertical h3{
+	color: #857F58;
+}
+.coluna-vertical a{
+	color: #6F6A49;
+	font-weight: bold;
+}
+.coluna-vertical h3, p, a{
+	display: inline-block;
+	padding-left: 25px;
+	padding-top: 5px;
+}
+.coluna-vertical img{
+	width: 150px;
+	float: left;
 }
 
 /* Rodapé */
@@ -141,6 +168,7 @@ body{
 	color: #857F58;
 	font-size: 0.8em;
 	clear: both;
+	padding: 15px 0px 15px 0px;
 }
 
 
@@ -198,11 +226,22 @@ body{
 	#informacao{
 		width: 100%;
 		float: none;
+		margin-top: 200px;
 	}
+	.coluna-vertical{
+		text-align: center;
+	}
+	.coluna-vertical img{
+		width: 120px;
+		float: none;
+	}
+	.coluna-vertical h3, p, a{
+		display: block;
+	}	
 }
 
 /* Dispositivos Pequenos */
-@media screen and (min-width: 370px) and (max-width: 400px){
+@media screen and (min-width: 280px) and (max-width: 490px){
 	body{
 		font-size: 15px;
 		margin: 0;
@@ -253,5 +292,17 @@ body{
 	#informacao{
 		width: 100%;
 		float: none;
+		margin-top: 200px;
+
 	}
+	.coluna-vertical{
+		text-align: center;
+	}
+	.coluna-vertical img{
+		width: 120px;
+		float: none;
+	}
+	.coluna-vertical h3, p, a{
+		display: block;
+	}	
 }
