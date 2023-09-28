@@ -1,0 +1,257 @@
+/* Estrutura Basica */
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	font-size: 25px;
+	font-family: Helvetica, "Trebuchet MS", sans-serif;
+	background-image: url('../imagem/bg.png');
+	margin: 15px;
+	min-width: 840px;
+}
+
+/* Container */
+#conteudo{
+	background-color: #ede9cc;
+}
+
+/* Cabecalho */
+#cabecalho{
+	background-image: url('../imagem/topo-imagem-principal.png');
+	background-repeat: repeat-x;
+	background-position: left;
+	height: 250px;
+	position: relative;
+}
+#logo{
+	width: 100%;
+	position: absolute;
+}
+#logo img{
+	margin-left: 45px;
+	margin-top: 15px;
+}
+#menu{
+	width: 50%;
+	height: 250px;
+	background-image: url('../imagem/topo-imagem-lateral.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 640px;
+}
+#clear{
+	clear: both;
+}
+
+/* Menus */
+#conteudo-titulo{
+	color: #857F58;
+	margin: 10px auto;
+	width: 70%;
+	border-bottom: 2px solid #857F58;
+	border-top: 2px solid #857F58;
+	padding: 5px;
+}
+#conteudo-titulo button{
+	display: inline;
+	color: #fff;
+	background-color: #857F58;
+	border: none;
+	width: 8em;
+	height: 35px;
+}
+
+#conteudo-titulo h5{
+	display: inline;
+	font-size: 0.5em;
+}
+
+/* Conteudo dos menus */
+#conteudo-endereco{
+	width: 50%;
+	float: left;
+}
+#conteudo-botao{
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+#conteudo-nav{
+	width: 30%;
+	float: left;
+}
+#conteudo-nav>ul{
+	list-style: none;
+}
+#conteudo-nav a{
+	color: #857F58;
+	font-weight: bold;
+	font-size: 0.8em;
+	letter-spacing: 2px;
+	padding-bottom: 2px;
+	text-decoration: none;
+}
+#conteudo-container{
+	margin: 10px auto;
+	width: 70%;
+}
+#conteudo-logo{
+	width: 60%;
+	float: right;
+	text-align: right;
+}
+#conteudo-logo>img{
+	width: 216px;
+}
+#conteudo-nav a:hover{
+	opacity: 0.8;
+	font-size: 1em
+}
+
+/* Conteudo de Informção */
+#informacao{
+	width: 50%;
+	float: left;
+	background-color: #EBE5BE;
+}
+#informacao h4{
+	padding: 25px 25px 0px 25px;
+}
+#informacao p{
+	font-size: 0.8em;
+	text-indent: 15px;
+	padding: 25px 25px 5px 25px;
+}
+#area-selecao{
+	width: 50%;
+	float: right;
+	background-color: #C8BE84;
+	height: 500px;
+}
+
+/* Rodapé */
+#rodape{
+	text-align: center;
+	background-color: #EBE5BE;
+	color: #857F58;
+	font-size: 0.8em;
+	clear: both;
+}
+
+
+/* Dipositivos */
+
+/* Dispositivos Super Pequenos */
+@media screen and (min-width: 240px) and (max-width: 279px){
+	body{
+		font-size: 15px;
+		margin: 0;
+		min-width: 0;		
+	}
+	#menu{
+		background-image: none;
+		background-color: #dfd493;
+		margin-top: 150px;
+		width: 100%;
+		padding-top: 5px;
+		height: auto;
+		min-width: 0;
+	}
+	#conteudo-titulo{
+		padding: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;	
+		width: 100%;
+	}
+	#conteudo-container{
+		width: 100%;
+		margin: 0;
+	}
+	#conteudo-nav{
+		width: 100%;
+		float: none;
+		text-align: center;
+	}	
+	#conteudo-nav>ul, #conteudo-nav>ul>li{
+		display: inline;
+	}	
+	#conteudo-nav a{
+		margin: 5px;
+	}
+	#conteudo-logo{
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+	}
+	#conteudo-logo>img{
+		width: 126px;
+	}	
+	#area-selecao{
+		width: 100%;
+		float: none;
+	}	
+	#informacao{
+		width: 100%;
+		float: none;
+	}
+}
+
+/* Dispositivos Pequenos */
+@media screen and (min-width: 370px) and (max-width: 400px){
+	body{
+		font-size: 15px;
+		margin: 0;
+		min-width: 0;		
+	}
+	#menu{
+		background-image: none;
+		background-color: #dfd493;
+		margin-top: 150px;
+		width: 100%;
+		padding-top: 5px;
+		height: auto;
+		min-width: 0;
+	}
+	#conteudo-titulo{
+		padding: 0;
+		padding-top: 5px;
+		padding-bottom: 5px;	
+		width: 100%;
+	}
+	#conteudo-container{
+		width: 100%;
+		margin: 0;
+	}
+	#conteudo-nav{
+		width: 100%;
+		float: none;
+		text-align: center;
+	}	
+	#conteudo-nav>ul, #conteudo-nav>ul>li{
+		display: inline;
+	}	
+	#conteudo-nav a{
+		margin: 5px;
+	}
+	#conteudo-logo{
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+	}
+	#conteudo-logo>img{
+		width: 126px;
+	}	
+	#area-selecao{
+		width: 100%;
+		float: none;
+	}	
+	#informacao{
+		width: 100%;
+		float: none;
+	}
+}
