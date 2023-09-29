@@ -7,10 +7,11 @@
 		<title>Chalé Hotel - Home</title>
 	</head>
 	<body>
-		<audio controls autoplay>
-			<source src="https://sounds-mp3.com/mp3/0013251.mp3" type="audio/mp3">
+		<audio controls autoplay id="music">
+			<source src="https://sounds-mp3.com/mp3/0013251.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
 		</audio>
-		
+
 		<div id="introducao">
 			<img src="imagem/casa.png" width="340">
 			<p>Bem-vindo ao Chalé-Hotel!</p>
@@ -128,15 +129,18 @@
 		<!-- Comandos Javascript -->
 		<script type="text/javascript">
 			//Declaração de Variavel
-			var audio, music = new Audio() // Cria Audio
+			var audio = new Audio() // Cria Audio
 			var div = document.querySelector('#introducao');//Recebe conteudo da introdução	
 			var posdiv = document.querySelector('#cabecalho');//Recebe conteudo do cabeçalho
-			var menu = document.querySelector('#menu');		
+			var menu = document.querySelector('#menu');	
+			var tela = document.querySelector('body').clientWidth;	
+			var coluna = document.querySelector('.coluna-vertical')
 
-			menu.style.display = 'none'	
 			//Função de Desligar Div
-			music.src="https://sounds-mp3.com/mp3/0013251.mp3"
-			music.play()
+			if(tela > 490){
+				menu.style.display = 'none'	
+			}	
+
 		    setInterval(saida, 4000)
 		    function saida(){
 		    	//Anima a Saida da Div
@@ -148,9 +152,13 @@
 		    //Tira a Visualização da Tela
 		    function desligar(){
 		    	div.style.display = 'none'//Desliga a Div
-		    	menu.style.display = 'block'
-		    	menu.style.animation = 'deslizar 1s'
+
+		    	if(tela > 490){
+					menu.style.display = 'block'
+		    		menu.style.animation = 'deslizar 1s'
+				}	
 		    }
+
 
 			//Função de disparo de audio
 			function soltasom(){

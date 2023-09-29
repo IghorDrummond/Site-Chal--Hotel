@@ -11,9 +11,6 @@ body{
 	margin: 15px;
 	min-width: 840px;
 }
-body>audio{
-	display: none;
-}
 
 /* introdução */
 #introducao{
@@ -74,11 +71,9 @@ body>audio{
 @keyframes deslizar{
 	0%{
 		opacity: 0;
-		right: 5000px;
 	}
 	100%{
 		opacity: 1	;
-		right: 0;
 	}
 }
 
