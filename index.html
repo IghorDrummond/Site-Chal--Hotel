@@ -7,6 +7,14 @@
 		<title>Chalé Hotel - Home</title>
 	</head>
 	<body>
+		<audio controls autoplay>
+			<source src="https://sounds-mp3.com/mp3/0013251.mp3" type="audio/mp3">
+		</audio>
+		
+		<div id="introducao">
+			<img src="imagem/casa.png" width="340">
+			<p>Bem-vindo ao Chalé-Hotel!</p>
+		</div>
 		<div id="cabecalho"><!-- Inicio do Cabecalho -->
 			<div id="logo">
 				<a href="">
@@ -21,7 +29,7 @@
 						<h5>Rio de Janeiro - São Paulo - Belo Horizonte</h5>
 					</div>
 					<div id="conteudo-botao">
-						<button>RESERVAR</button>
+						<button onmouseover="soltasom()">RESERVAR</button>
 					</div>
 					<div id="clear"></div>
 				</div><!-- Fim do Endereco + Botao -->
@@ -116,5 +124,39 @@
 				<h4>Todos os Direitos Reservados 2023 - Ighor Drummond</h4>
 			</div>
 		</div><!-- Fim do Conteudo -->
+
+		<!-- Comandos Javascript -->
+		<script type="text/javascript">
+			//Declaração de Variavel
+			var audio, music = new Audio() // Cria Audio
+			var div = document.querySelector('#introducao');//Recebe conteudo da introdução	
+			var posdiv = document.querySelector('#cabecalho');//Recebe conteudo do cabeçalho
+			var menu = document.querySelector('#menu');		
+
+			menu.style.display = 'none'	
+			//Função de Desligar Div
+			music.src="https://sounds-mp3.com/mp3/0013251.mp3"
+			music.play()
+		    setInterval(saida, 4000)
+		    function saida(){
+		    	//Anima a Saida da Div
+		    	div.style.animation = 'sair 1s'
+		    	posdiv.style.position = 'relative'//Seta a posição do cabecalho como relativo
+		    	setTimeout(desligar, 1000)
+		    }
+
+		    //Tira a Visualização da Tela
+		    function desligar(){
+		    	div.style.display = 'none'//Desliga a Div
+		    	menu.style.display = 'block'
+		    	menu.style.animation = 'deslizar 1s'
+		    }
+
+			//Função de disparo de audio
+			function soltasom(){
+				audio.src = 'https://sounds-mp3.com/mp3/0000171.mp3'
+				audio.play()
+			}
+		</script>
 	</body>
 </html>
