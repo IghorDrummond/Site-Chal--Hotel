@@ -7,11 +7,6 @@
 		<title>Chalé Hotel - Home</title>
 	</head>
 	<body>
-		<audio controls autoplay id="music">
-			<source src="https://sounds-mp3.com/mp3/0013251.mp3" type="audio/mpeg">
-			Your browser does not support the audio element.
-		</audio>
-
 		<div id="introducao">
 			<img src="imagem/casa.png" width="340">
 			<p>Bem-vindo ao Chalé-Hotel!</p>
@@ -132,33 +127,19 @@
 			var audio = new Audio() // Cria Audio
 			var div = document.querySelector('#introducao');//Recebe conteudo da introdução	
 			var posdiv = document.querySelector('#cabecalho');//Recebe conteudo do cabeçalho
-			var menu = document.querySelector('#menu');	
-			var tela = document.querySelector('body').clientWidth;	
-			var coluna = document.querySelector('.coluna-vertical')
 
 			//Função de Desligar Div
-			if(tela > 490){
-				menu.style.display = 'none'	
-			}	
-
 		    setInterval(saida, 4000)
 		    function saida(){
 		    	//Anima a Saida da Div
 		    	div.style.animation = 'sair 1s'
-		    	posdiv.style.position = 'relative'//Seta a posição do cabecalho como relativo
 		    	setTimeout(desligar, 1000)
 		    }
 
 		    //Tira a Visualização da Tela
 		    function desligar(){
 		    	div.style.display = 'none'//Desliga a Div
-
-		    	if(tela > 490){
-					menu.style.display = 'block'
-		    		menu.style.animation = 'deslizar 1s'
-				}	
 		    }
-
 
 			//Função de disparo de audio
 			function soltasom(){
