@@ -8,7 +8,6 @@ body{
 	font-size: 25px;
 	font-family: Helvetica, "Trebuchet MS", sans-serif;
 	background-image: url('../imagem/bg.png');
-	margin: 15px;
 	min-width: 840px;
 	z-index: 0;
 }
@@ -216,6 +215,7 @@ body{
 .coluna-vertical:hover{
 	background-color: #EBE5BE;
 	cursor: pointer;
+	transform: scale(1.1);
 }
 .coluna-vertical h3{
 	color: #857F58;
